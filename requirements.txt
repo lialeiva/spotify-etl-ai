@@ -1,0 +1,17 @@
+# Core ETL & Data Processing
+# Core ETL & Data Processing
+pandas==2.2.1
+
+# Spotify API
+spotipy==2.23.0
+
+# Database
+psycopg2-binary==2.9.9   # Conexión a PostgreSQL
+SQLAlchemy==2.0.29       # ORM opcional para mayor flexibilidad
+
+# Logging & Config
+python-dotenv==1.0.1     # Manejo de variables de entorno
+
+# LLM Integration
+openai==2.31.0           # Cliente oficial OpenAI
+requests==2.31.0         # Para llamadas HTTP genéricas (ej. HuggingFace
