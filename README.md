@@ -107,28 +107,30 @@ Esto ejecutará secuencialmente:
 Así verá las salidas al ejecutar el pipeline ETL:
 
 ```bash
-🚀 Iniciando pipeline ETL...
-📅 Procesando datos desde: 2026-04-12 01:20:52
+🚀 Starting pipeline ETL...
+📅 Processing data from: 2026-04-12 09:26:01
 
-📥 PASO 1: EXTRACT
-✅ Extracted 25 registers
+📥 STEP 1: EXTRACT
+✅ Extracted 40 registers
 
-🔄 Transformando datos...
-✅ Transformados 25 registros
+📥 STEP 2: TRANSFORM
+🔄 Transforming data...
+✅ Transformed 40 registers
 
        played_at               artist                                             track                                                                 url                          
 2026-04-13T05:18:50.052Z      Avril Lavigne                                                                        Complicated https://open.spotify.com/artist/0p4nmQO2msCgU4IF37Wi3j
 2026-04-13T05:14:19.643Z       Benson Boone                                                                   Beautiful Things https://open.spotify.com/artist/22wbnEMDvgVIAGdFeek6ET
-... (más filas) ...
+... (more rows) ...
 
-💾 PASO 3: LOAD
-ℹ️ La tabla 'spotify_recently_playlist' ya existe, no se necesita crear
-   ✅ Cargados 25 registros
+💾 STEP 3: LOAD
+ℹ️ Table 'spotify_recently_playlist' already exists, no creation needed
+   ✅ Loaded 40 registers
 
-🎉 Pipeline ETL completado exitosamente ✅
-📊 Total de registros cargados: 25
+🎉 Pipeline ETL completed successfully ✅
+📊 Total records: 40
 
-🤖 PASO 4 LLM: GENERAR ANALISIS DE PLAY LIST
+🤖 STEP 4 LLM: GENERATE AN ANALYSIS OF THE PLAYLIST
+
 
 😊 Analyze mood:
 Overall, the mood reads as emotionally charged and catchy...
@@ -137,11 +139,18 @@ Overall, the mood reads as emotionally charged and catchy...
 Your playlist points to...
 
 💿 Suggest playlist name:
-1. **Desamor con Guitarras y Corazón**  
-2. **Pop Rock & Besos Amargos (EN/ES)**  
-3. **De “Complicated” a “Algo Más”**  
-4. **Serenata Alternativa para Superarlo**  
-5. **Entre Takedown y Chocolate**
+1. **Golden Hopes & Neon Demons**  
+2. **Idols After Dark (Pop, Pulse & Power)**  
+3. **Soda Pop Anthems & Monster Choruses**  
+4. **Faded but Fearless: High-Voltage Hits**  
+5. **Misfits on the Mainstage (Sing It Loud Edition)**
+
+🤪 Obsessions:
+Playing “Golden” 8 times isn’t obsession—it’s **quality control**. You’re basically a one-person 
+streaming committee ensuring the song remains properly golden. Possible diagnoses:  
+1) You’re **in a good mood** and refuse to let reality interrupt it.  
+2) You’re **in a weird mood** and the chorus is your emotional support blanket.  
+3) You’re **romanticizing your life** like you’re walking in slow motion to a movie soundtrack
 ```
 
 ## 📊 Diagrama de flujo ETL + LLM resumido

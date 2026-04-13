@@ -58,7 +58,7 @@ def create_playlist_summary(df):
     - Total songs: {total_songs}
     - Unique artists: {unique_artists}
     - Most played artist: {top_artist}
-    Write a creative, fun summary in Spanish (max 100 words).
+    Write a creative, fun summary (max 100 words).
     """
     return get_llm_response(prompt)
 
@@ -86,6 +86,6 @@ def identify_obsessions(df):
     I've played "{song_name}" {play_count} times recently.
 
     What does this say about me? Am I obsessed, going through something, 
-    or just really loving this song? Answer with humor.
+    or just really loving this song? Answer with humor (max 100 words).
     """
     return get_llm_response(prompt)
